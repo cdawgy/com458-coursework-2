@@ -1,0 +1,27 @@
+{
+    "itemListingTitle": "someTitle",
+    "itemListingInfo": {
+        "price": "£123",
+        "make": "someMake",
+        "model": "someModel",
+        "year": "2000",
+        "mileage": "89000",
+        "location": "someLocation",
+        "colour": "white",
+        "engineSize": "1.6",
+        "fuelType": "petrol",
+        "transmission": "manual",
+        "doors": "3",
+        "bodyStyle": "convertible",
+        "owners": "5",
+        "motExpireDate": "dateFormat",
+        "sellerType": "private/company"
+    },
+    "description": "someDescription",
+    "listOfItemImages": [
+        "imageAbsPath",
+        "imageAbsPath",
+        "imageAbsPath",
+        "imageAbsPath"
+    ]
+}
