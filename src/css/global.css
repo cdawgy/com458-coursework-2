@@ -1,0 +1,103 @@
+/* *************** */
+/* TEXT FORMATTING */
+/* *************** */
+h1 {
+  font-family: "Century Gothic", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+p,
+.body-text {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* ************** */
+/* NAVBAR STYLING */
+/* ************** */
+
+#navbarNav {
+  justify-content: center;
+}
+
+.navbar {
+  height: 70px;
+  background-color: #5f6062;
+}
+
+.nav-link {
+  color: #ffffff !important;
+}
+
+.nav-link:hover {
+  color: #ee4b6a !important;
+}
+
+.navbar-toggler {
+  background-color: #5f6062;
+}
+
+/* For mobile view formatting */
+
+@media only screen and (max-width: 991px) {
+  #navbarNav {
+    justify-content: center;
+    background-color: #ffffff;
+    margin-top: -1px;
+  }
+
+  .navbar-nav > .nav-item {
+    border-bottom: 1px solid #9c9fa3;
+  }
+
+  .navbar-nav > .nav-item:last-child {
+    border: none;
+  }
+
+  .nav-item {
+      padding: 0 25px 0 25px;
+  }
+
+  .nav-link {
+    color: #5f6062 !important;
+  }
+}
+
+body {
+  margin-top: 70px;
+}
+
+/* ************** */
+/* FOOTER STYLING */
+/* ************** */
+
+footer {
+    background-color: #9C858A;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 0 30px 0;
+}
+
+footer > ul > li {
+    display: inline;
+    padding: 0 10px;
+    border-right: 2px solid #ffffff;
+}
+
+footer > ul > li:last-child {
+    border: none;
+}
+
+footer > ul > li > a{
+    color: #ffffff;
+    text-decoration: none;
+    vertical-align: top;
+}
