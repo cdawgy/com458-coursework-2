@@ -11,11 +11,16 @@
 
   <!-- Custom CSS gets listed after here -->
   <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/index.css" />
   <body>
     <!-- NAVBAR START -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
       <div class="container">
-        <a class="navbar-brand" href="index.html"><img src="../../assets/navigationBar/logo.png" alt="Connolly Group company logo" /></a>
+        <a class="navbar-brand" href="index.html"
+          ><img
+            src="../../assets/navigationBar/logo.png"
+            alt="Connolly Group company logo"
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -30,13 +35,22 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active body-text" aria-current="page" href="index.html">Home</a>
+              <a
+                class="nav-link active body-text"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link body-text" href="sellYourCar.html">Sell Your Car</a>
+              <a class="nav-link body-text" href="sellYourCar.html"
+                >Sell Your Car</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link body-text" href="searchResults.html">Used Cars</a>
+              <a class="nav-link body-text" href="searchResults.html"
+                >Used Cars</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link body-text" href="contactUs.html">Contact Us</a>
@@ -47,24 +61,187 @@
     </nav>
     <!-- NAVBAR END -->
 
+    <div class="container-fluid search-wrapper">
+      <div class="container">
+        <h1 class="font-green">Connolly Group Car Sales</h1>
+        <h2 class="font-white">A new car is just a few clicks away!</h2>
+
+        <div class="search-bar-wrapper">
+          <p>Search</p>
+          <form>
+            <select id="make" name="make">
+              <option value="" disabled selected>Make</option>
+              <option value="audi">Audi</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="mazda">Mazda</option>
+            </select>
+            <select id="model" name="model">
+              <option value="" disabled selected>Model</option>
+              <option value="audi">A1</option>
+              <option value="mercedes">A3</option>
+              <option value="mazda">A5</option>
+            </select>
+            <select id="transmission" name="transmission">
+              <option value="" disabled selected>Transmission</option>
+              <option value="automatic">Automatic</option>
+              <option value="manual">Manual</option>
+            </select>
+            <select id="fuelType" name="fuelType">
+              <option value="" disabled selected>Fuel Type</option>
+              <option value="petrol">Petrol</option>
+              <option value="diesel">Diesel</option>
+              <option value="electric">Electric</option>
+            </select>
+            <button type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
-      <h1 class="main-title">Main Title</h1>
-      <h2>Sub title</h2>
-      <p>Body Text</p>
+      <h1 class="mt-5">Latest Used Cars</h1>
+      <div class="d-flex">
+        <div class="car-listing-tile">
+          <div class="tile-img"></div>
+          <div class="tile-body">
+            <p class="tile-title">VW Polo - 2012</p>
+            <p class="tile-subtitle">2012 | Petrol 84K miles</p>
+            <div class="tile-button-price">
+              <button>More Info</button>
+              <p><span>£</span>4,999</p>
+            </div>
+          </div>
+        </div>
+        <div class="car-listing-tile">
+          <div class="tile-img"></div>
+          <div class="tile-body">
+            <p class="tile-title">VW Polo - 2012</p>
+            <p class="tile-subtitle">2012 | Petrol 84K miles</p>
+            <div class="tile-button-price">
+              <button>More Info</button>
+              <p><span>£</span>4,999</p>
+            </div>
+          </div>
+        </div>
+        <div class="car-listing-tile">
+          <div class="tile-img"></div>
+          <div class="tile-body">
+            <p class="tile-title">VW Polo - 2012</p>
+            <p class="tile-subtitle">2012 | Petrol 84K miles</p>
+            <div class="tile-button-price">
+              <button>More Info</button>
+              <p><span>£</span>4,999</p>
+            </div>
+          </div>
+        </div>
+        <div class="car-listing-tile">
+          <div class="tile-img"></div>
+          <div class="tile-body">
+            <p class="tile-title">VW Polo - 2012</p>
+            <p class="tile-subtitle">2012 | Petrol 84K miles</p>
+            <div class="tile-button-price">
+              <button>More Info</button>
+              <p><span>£</span>4,999</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid electric-cars">
+      <div class="container">
+        <div class="electric-car-content">
+          <h1 class="font-white pt-5">What are Electric Cars...</h1>
+          <p class="font-white">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis
+            nibh at turpis congue faucibus at sed nulla. Aliquam sagittis ex
+            urna, quis malesuada orci pharetra non. Nunc eleifend rhoncus nibh,
+            sit amet dapibus nibh ultricies sit amet. Aliquam eu velit
+            porttitor, bibendum turpis a, dapibus neque. Quisque lacinia ante ac
+            fermentum ultrices.
+          </p>
+          <button>More info</button>
+        </div>
+        <div class="electric-car-img"></div>
+      </div>
+    </div>
+
+    <div class="container mb-5">
+      <h1 class="mt-5">New Car Essentials</h1>
+      <div class="row">
+
+        <div class="col-sm-8 col-md-6 col-lg-3">
+          <div class="info-tile">
+            <a href="#">
+              <div class="info-tile-img"></div>
+              <p>Insurance</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-sm-8 col-md-6 col-lg-3">
+          <div class="info-tile">
+            <a href="#">
+              <div class="info-tile-img"></div>
+              <p>Insurance</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-sm-8 col-md-6 col-lg-3">
+          <div class="info-tile">
+            <a href="#">
+              <div class="info-tile-img"></div>
+              <p>Insurance</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-sm-8 col-md-6 col-lg-3">
+          <div class="info-tile">
+            <a href="#">
+              <div class="info-tile-img"></div>
+              <p>Insurance</p>
+            </a>
+          </div>
+        </div>
+
+      </div>
     </div>
 
     <footer>
       <h1>Follow Us On...</h1>
-      <p>Check us out on the following social media accounts for live updates on the latest listings.</p>
+      <p>
+        Check us out on the following social media accounts for live updates on
+        the latest listings.
+      </p>
       <ul>
         <li>
-          <a href="#"><img src="../../assets/footerBar/facebook.svg" alt="Icon for facebook website" /> Facebook</a>
+          <a href="#"
+            ><img
+              src="../../assets/footerBar/facebook.svg"
+              alt="Icon for facebook website"
+            />
+            Facebook</a
+          >
         </li>
         <li>
-          <a href="#"><img src="../../assets/footerBar/twitter.svg" alt="Icon for twitter website" /> Twitter</a>
+          <a href="#"
+            ><img
+              src="../../assets/footerBar/twitter.svg"
+              alt="Icon for twitter website"
+            />
+            Twitter</a
+          >
         </li>
         <li>
-          <a href="#"><img src="../../assets/footerBar/instagram.svg" alt="Icon for instagram website" /> Instagram</a>
+          <a href="#"
+            ><img
+              src="../../assets/footerBar/instagram.svg"
+              alt="Icon for instagram website"
+            />
+            Instagram</a
+          >
         </li>
       </ul>
     </footer>

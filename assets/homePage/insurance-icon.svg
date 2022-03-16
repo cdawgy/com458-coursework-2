@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="107.432" height="123.37" viewBox="0 0 107.432 123.37">
+  <g id="Group_92" data-name="Group 92" transform="translate(367.922 -5311.5)">
+    <g id="Group_91" data-name="Group 91" transform="translate(-336.358 5314)">
+      <g id="clipboard">
+        <path id="Path_15" data-name="Path 15" d="M59.026,4H68.2a9.171,9.171,0,0,1,9.171,9.171v64.2A9.171,9.171,0,0,1,68.2,86.539H13.171A9.171,9.171,0,0,1,4,77.368v-64.2A9.171,9.171,0,0,1,13.171,4h9.171" transform="translate(-4 4.882)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+        <rect id="Rectangle_55" data-name="Rectangle 55" width="35.948" height="17.974" rx="1" transform="translate(18.71 0)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+      </g>
+      <line id="Line_48" data-name="Line 48" x2="47.503" transform="translate(13.254 31.134)" fill="none" stroke="#49beaa" stroke-linecap="round" stroke-width="4"/>
+      <line id="Line_49" data-name="Line 49" x2="42.368" transform="translate(13.254 37.553)" fill="none" stroke="#49beaa" stroke-linecap="round" stroke-width="4"/>
+      <line id="Line_50" data-name="Line 50" x2="41.084" transform="translate(13.254 43.973)" fill="none" stroke="#49beaa" stroke-linecap="round" stroke-width="4"/>
+      <line id="Line_51" data-name="Line 51" x2="44.935" transform="translate(13.254 50.392)" fill="none" stroke="#49beaa" stroke-linecap="round" stroke-width="4"/>
+      <line id="Line_52" data-name="Line 52" x2="43.652" transform="translate(13.254 56.811)" fill="none" stroke="#49beaa" stroke-linecap="round" stroke-width="4"/>
+      <line id="Line_53" data-name="Line 53" x2="45.577" transform="translate(13.254 63.231)" fill="none" stroke="#49beaa" stroke-linecap="round" stroke-width="4"/>
+      <line id="Line_54" data-name="Line 54" x2="30.813" transform="translate(13.254 69.65)" fill="none" stroke="#49beaa" stroke-linecap="round" stroke-width="4"/>
+    </g>
+    <g id="Group_90" data-name="Group 90" transform="translate(-365.422 5359.711)">
+      <path id="shield" d="M33.064,74.659S62.128,60.128,62.128,38.33V12.9L33.064,2,4,12.9V38.33C4,60.128,33.064,74.659,33.064,74.659Z" transform="translate(-4 -2)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+      <line id="Line_46" data-name="Line 46" y2="25.973" transform="translate(28.868 19.939)" fill="none" stroke="#ee4b6a" stroke-linecap="round" stroke-width="6"/>
+      <line id="Line_47" data-name="Line 47" x1="15.422" transform="translate(21.353 30.491)" fill="none" stroke="#ee4b6a" stroke-linecap="round" stroke-width="6"/>
+    </g>
+  </g>
+</svg>

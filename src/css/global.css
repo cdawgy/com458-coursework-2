@@ -18,6 +18,19 @@ p,
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 500;
+  color: #333333;
+}
+
+.font-red {
+  color: #ee4b6a;
+}
+
+.font-green {
+  color: #49beaa;
+}
+
+.font-white {
+  color: #ffffff;
 }
 
 /* ************** */
@@ -63,12 +76,28 @@ p,
   }
 
   .nav-item {
-      padding: 0 25px 0 25px;
+    padding: 0 25px 0 25px;
   }
 
   .nav-link {
     color: #5f6062 !important;
   }
+}
+
+/* ************** */
+/* BUTTON STYLING */
+/* ************** */
+
+button {
+  background-color: #ee4b6a;
+  color: #ffffff;
+  border: none !important;
+  transition: 0.2s;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #ba3750;
 }
 
 body {
@@ -80,24 +109,24 @@ body {
 /* ************** */
 
 footer {
-    background-color: #9C858A;
-    color: #ffffff;
-    text-align: center;
-    padding: 40px 0 30px 0;
+  background-color: #9c858a;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 0 30px 0;
 }
 
 footer > ul > li {
-    display: inline;
-    padding: 0 10px;
-    border-right: 2px solid #ffffff;
+  display: inline;
+  padding: 0 10px;
+  border-right: 2px solid #ffffff;
 }
 
 footer > ul > li:last-child {
-    border: none;
+  border: none;
 }
 
-footer > ul > li > a{
-    color: #ffffff;
-    text-decoration: none;
-    vertical-align: top;
+footer > ul > li > a {
+  color: #ffffff;
+  text-decoration: none;
+  vertical-align: top;
 }
