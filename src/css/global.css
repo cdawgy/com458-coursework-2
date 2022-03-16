@@ -30,7 +30,7 @@ p,
 }
 
 .font-white {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 /* ************** */
@@ -110,7 +110,6 @@ body {
 
 footer {
   background-color: #9c858a;
-  color: #ffffff;
   text-align: center;
   padding: 40px 0 30px 0;
 }
