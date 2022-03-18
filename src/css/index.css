@@ -33,6 +33,7 @@
   -webkit-appearance: none; /* Safari and Chrome */
   appearance: none;
   position: relative;
+  border-radius: 5px;
 
   background-image: url("../../assets/homePage/chevron-down.svg");
   background-repeat: no-repeat;
