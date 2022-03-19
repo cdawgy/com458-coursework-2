@@ -158,7 +158,7 @@
 }
 
 .info-tile-img {
-    background-image: url("../../assets/homePage/insurance-icon.svg");
+    /* background-image: url("../../assets/homePage/insurance-icon.svg"); */
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

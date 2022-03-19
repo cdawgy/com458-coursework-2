@@ -2,6 +2,9 @@
 const LATEST_CARS_ROOT = document.getElementById("latestUsedCars");
 LATEST_CARS_ROOT.onload = renderUsedCarTiles(4);
 
+const NEW_ESSENTIALS_ROOT = document.getElementById("newCarEssentialsRoot");
+NEW_ESSENTIALS_ROOT.onload = renderEssentialsTiles();
+
 // Dynamic model selection depending on car Make
 const MAKE_SELECT = document.getElementById("make");
 const MODEL_SELECT = document.getElementById("model");
@@ -71,10 +74,12 @@ MAKE_SELECT.addEventListener("change", getModelsRelativeToMake);
 
 // Functionality for dynamically generating HTML components
 
+//// Latest Car Tiles
+
 function renderUsedCarTiles(tileRenderCount) {
   const recentCarListings = API_CAR_LIST_RESPONSE.slice(0, tileRenderCount);
   const listOfCreatedCarListingTiles = createCarTiles(recentCarListings);
-  
+
   listOfCreatedCarListingTiles.forEach((carListing) => {
     LATEST_CARS_ROOT.appendChild(carListing);
   });
@@ -90,7 +95,7 @@ function createCarTile(carListing) {
   const carListingTile = document.createElement("div");
   carListingTile.className = "car-listing-tile";
 
-  // Create image 
+  // Create image
   const carTileImg = createCarTileImage(carListing.listOfItemImages[0]);
 
   // Create tile body
@@ -149,4 +154,39 @@ function createCarTileButton(carListing) {
   tileButtonPriceContainer.appendChild(tilePrice);
 
   return tileButtonPriceContainer;
+}
+
+//// New Car Essentials Tiles
+
+function renderEssentialsTiles() {
+  NEW_CAR_ESSENTIALS_LIST.forEach((essentialItem) => {
+    NEW_ESSENTIALS_ROOT.appendChild(
+      createEssentialTileComponent(essentialItem)
+    );
+  });
+}
+
+function createEssentialTileComponent(essentialItem) {
+  const responsiveContainer = document.createElement("div");
+  responsiveContainer.className = "col-sm-8 col-md-6 col-lg-3";
+
+  const tileContianer = document.createElement("div");
+  tileContianer.className = "info-tile";
+
+  const anchorLink = document.createElement("a");
+  anchorLink.href = "#";
+
+  const tileImg = document.createElement("div");
+  tileImg.className = "info-tile-img";
+  tileImg.style.backgroundImage = `url("${essentialItem.img}")`;
+
+  const tileText = document.createElement("p");
+  tileText.innerHTML = essentialItem.title;
+
+  responsiveContainer.appendChild(tileContianer);
+  tileContianer.appendChild(anchorLink);
+  anchorLink.appendChild(tileImg);
+  anchorLink.appendChild(tileText);
+
+  return responsiveContainer;
 }

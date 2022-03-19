@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="149.892" height="101.76" viewBox="0 0 149.892 101.76">
+  <g id="Group_95" data-name="Group 95" transform="translate(350.075 -5283.042)">
+    <g id="Group_93" data-name="Group 93" transform="translate(-328.639 5304.479)">
+      <path id="Exclusion_1" data-name="Exclusion 1" d="M95.091,53.17a8.632,8.632,0,0,1-8.622-8.622V35.207H17.246v9.341A8.622,8.622,0,0,1,0,44.548V20A19.983,19.983,0,0,1,20,0H83.714a19.983,19.983,0,0,1,20,20V44.548A8.632,8.632,0,0,1,95.091,53.17ZM92.5,11.127a7.431,7.431,0,1,0,7.43,7.43A7.439,7.439,0,0,0,92.5,11.127Zm-81.3,0a7.431,7.431,0,1,0,7.431,7.43A7.439,7.439,0,0,0,11.209,11.127Z" transform="translate(0 27.153)" fill="#333"/>
+      <path id="Path_5" data-name="Path 5" d="M449.984,2580.5l15.089,31.793h-75.01l.307-.64,14.946-31.153Z" transform="translate(-375.71 -2580.5)" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="9"/>
+    </g>
+    <g id="dollar-sign" transform="translate(-346.075 5287.042)">
+      <line id="Line_55" data-name="Line 55" y2="60.446" transform="translate(16.385 0)" fill="none" stroke="#ee4b6a" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+      <path id="Path_17" data-name="Path 17" d="M36.04,5H15.558a9.558,9.558,0,0,0,0,19.116H29.213a9.558,9.558,0,1,1,0,19.116H6" transform="translate(-6 6.107)" fill="none" stroke="#ee4b6a" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+    </g>
+    <g id="Group_94" data-name="Group 94" transform="translate(-230.33 5296.142)">
+      <path id="Path_18" data-name="Path 18" d="M-137.631,5354.2c8.819-5.092,21.944,0,21.944,0" transform="translate(145.292 -5323.986)" fill="none" stroke="#9c858a" stroke-width="3" stroke-dasharray="6"/>
+      <path id="Path_19" data-name="Path 19" d="M-143.878,5350.135c14.13-7.323,18.313-7.639,25.655-8.428" transform="translate(146.393 -5322.182)" fill="none" stroke="#9c858a" stroke-width="3" stroke-dasharray="6"/>
+      <path id="Path_20" data-name="Path 20" d="M0,0C8.819,5.091,21.944,0,21.944,0" transform="matrix(0.574, -0.819, 0.819, 0.574, 1.097, 17.975)" fill="none" stroke="#9c858a" stroke-width="3" stroke-dasharray="6"/>
+      <path id="Path_21" data-name="Path 21" d="M0,0C14.13,7.322,18.313,7.638,25.655,8.428" transform="matrix(0.574, -0.819, 0.819, 0.574, 0, 23.488)" fill="none" stroke="#9c858a" stroke-width="3" stroke-dasharray="6"/>
+    </g>
+  </g>
+</svg>

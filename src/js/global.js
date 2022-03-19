@@ -119,3 +119,22 @@ const API_CAR_LIST_RESPONSE = [
     ],
   },
 ];
+
+const NEW_CAR_ESSENTIALS_LIST = [
+  {
+    title: "Insurance",
+    img: "../../assets/homePage/insurance-icon.svg",
+  },
+  {
+    title: "Car Value",
+    img: "../../assets/homePage/car-icon.svg",
+  },
+  {
+    title: "Finance",
+    img: "../../assets/homePage/finance-icon.svg",
+  },
+  {
+    title: "Car History",
+    img: "../../assets/homePage/history-icon.svg",
+  },
+];

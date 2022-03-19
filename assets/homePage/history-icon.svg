@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="146.668" height="131.017" viewBox="0 0 146.668 131.017">
+  <g id="Group_105" data-name="Group 105" transform="translate(-1553.668 -5594.438)">
+    <g id="archive" transform="translate(1583.955 5653.674)">
+      <path id="Path_25" data-name="Path 25" d="M60.005,8V49.17H3V8" transform="translate(3.671 8.066)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      <rect id="Rectangle_60" data-name="Rectangle 60" width="70.104" height="16.235" transform="translate(0 0)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      <line id="Line_58" data-name="Line 58" x2="12.545" transform="translate(28.78 28.78)" fill="none" stroke="#49beaa" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    </g>
+    <g id="archive-2" data-name="archive" transform="translate(1628.231 5653.674)">
+      <path id="Path_25-2" data-name="Path 25" d="M60.005,8V49.17H3V8" transform="translate(3.671 8.066)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      <rect id="Rectangle_60-2" data-name="Rectangle 60" width="70.104" height="16.235" transform="translate(0 0)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      <line id="Line_58-2" data-name="Line 58" x2="12.545" transform="translate(28.78 28.78)" fill="none" stroke="#49beaa" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    </g>
+    <g id="archive-3" data-name="archive" transform="translate(1604.617 5596.438)">
+      <path id="Path_25-3" data-name="Path 25" d="M60.005,8V49.17H3V8" transform="translate(3.671 8.066)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      <rect id="Rectangle_60-3" data-name="Rectangle 60" width="70.104" height="16.235" transform="translate(0 0)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      <line id="Line_58-3" data-name="Line 58" x2="12.545" transform="translate(28.78 28.78)" fill="none" stroke="#49beaa" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    </g>
+    <g id="book-open" transform="translate(1555.668 5666.45)">
+      <path id="Path_26" data-name="Path 26" d="M2,3H21A12.668,12.668,0,0,1,33.67,15.668V60.005a9.5,9.5,0,0,0-9.5-9.5H2Z" transform="translate(-2 -3)" fill="#ee4b6a" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      <path id="Path_27" data-name="Path 27" d="M43.67,3h-19A12.668,12.668,0,0,0,12,15.668V60.005a9.5,9.5,0,0,1,9.5-9.5H43.67Z" transform="translate(19.67 -3)" fill="#ee4b6a" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    </g>
+  </g>
+</svg>
