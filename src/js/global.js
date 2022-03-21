@@ -138,3 +138,10 @@ const NEW_CAR_ESSENTIALS_LIST = [
     img: "../../assets/homePage/history-icon.svg",
   },
 ];
+
+
+// Button for scrolling to the top of the webpage
+const FOOTER_BUTTON = document.getElementById("footer-button");
+FOOTER_BUTTON.addEventListener("click", () => {
+  window.scrollTo(0, 0);
+});

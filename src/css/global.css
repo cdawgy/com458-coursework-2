@@ -112,6 +112,7 @@ footer {
   background-color: #9c858a;
   text-align: center;
   padding: 40px 0 30px 0;
+  position: relative;
 }
 
 footer > ul > li {
@@ -128,4 +129,21 @@ footer > ul > li > a {
   color: #ffffff;
   text-decoration: none;
   vertical-align: top;
+}
+
+#footer-button {
+  background-color: #ffffff;
+  position: absolute;
+  padding: 10px;
+  right: 55px;
+  top: 25px;
+  border-radius: 5px;
+  box-shadow: #5f6062 4px 0px 20px -6px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 991px) {
+  #footer-button {
+    display: none;
+  }
 }
