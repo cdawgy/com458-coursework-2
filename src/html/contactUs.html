@@ -1,16 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
   <meta charset="UTF-8" />
-  <title>Contact Us Page</title>
+  <title>Home Page</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="../css/global.css" />
-  <style></style>
-  <body>
-    <img src="img_la.jpg" alt="LA" style="width: 100%" />
+  <!-- Required BootStrap CSS files -->
+  <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/bootstrap/bootstrap-grid.min.css" />
+  <link rel="stylesheet" href="../css/bootstrap/bootstrap-reboot.min.css" />
+  <link rel="stylesheet" href="../css/bootstrap/bootstrap-utilities.min.css" />
 
-    <div>
-      <h1>This is the Contact Us Page.</h1>
-    </div>
+  <!-- Custom CSS gets listed after here -->
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/index.css" />
+  <body>
+    <!-- NAVBAR START -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><img
+            src="../../assets/navigationBar/logo.png"
+            alt="Connolly Group company logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active body-text"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link body-text" href="sellYourCar.html"
+                >Sell Your Car</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link body-text" href="searchResults.html"
+                >Used Cars</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link body-text" href="contactUs.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+
+    <footer>
+      <h1 class="font-white">Follow Us On...</h1>
+      <p class="font-white">
+        Check us out on the following social media accounts for live updates on
+        the latest listings.
+      </p>
+      <ul>
+        <li>
+          <a href="#"
+            ><img
+              src="../../assets/footerBar/facebook.svg"
+              alt="Icon for facebook website"
+            />
+            Facebook</a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><img
+              src="../../assets/footerBar/twitter.svg"
+              alt="Icon for twitter website"
+            />
+            Twitter</a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><img
+              src="../../assets/footerBar/instagram.svg"
+              alt="Icon for instagram website"
+            />
+            Instagram</a
+          >
+        </li>
+      </ul>
+      <div id="footer-button">
+        <img src="../../assets/footerBar/chevrons-up.svg" alt="Upwards arrows. Click these to return to top of the page.">
+      </div>
+    </footer>
+    <!-- Required script tags in this order to allow Bootstrap to work -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
     <script src="../js/global.js"></script>
+    <script src="../js/index.js"></script>
   </body>
 </html>

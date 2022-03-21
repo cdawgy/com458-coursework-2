@@ -1,0 +1,89 @@
+.refine-search-wrapper {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: #5f6062 4px 0px 20px -6px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.refine-search-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.refine-search-wrapper form select {
+  display: block;
+  width: 100%;
+  border: #5f6062 1px solid;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+  background-image: url("../../assets/homePage/chevron-down.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  transition: 0.2s;
+}
+
+.refine-search-refresh {
+  background-color: #49beaa;
+  padding: 7px;
+  margin: auto;
+  display: flex;
+}
+
+.refine-search-refresh:hover {
+  background-color: #409082;
+}
+
+.refine-search-search {
+  padding: 3px;
+  width: 100%;
+}
+
+/* Item Listing */
+
+.search-listing-wrapper {
+  background-color: #ffffff;
+  width: 100%;
+  box-shadow: #5f6062 4px 0px 20px -6px;
+  border-radius: 5px;
+}
+
+.search-listing-body {
+  padding: 10px 50px 10px 0;
+}
+
+.search-listing-img {
+  height: 100%;
+  border-radius: 5px 0 0 5px;
+
+  background-image: url(../../assets/carListings/a3-1.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.search-listing-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-icons {
+  display: flex;
+}
+
+.info-icons > div {
+  border-right: #5f6062 solid 1px;
+  margin-right: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.info-icons > div:last-child {
+  border: none;
+}
