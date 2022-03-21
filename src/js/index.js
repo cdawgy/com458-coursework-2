@@ -5,75 +5,7 @@ LATEST_CARS_ROOT.onload = renderUsedCarTiles(4);
 const NEW_ESSENTIALS_ROOT = document.getElementById("newCarEssentialsRoot");
 NEW_ESSENTIALS_ROOT.onload = renderEssentialsTiles();
 
-// Dynamic model selection depending on car Make
-const MAKE_SELECT = document.getElementById("make");
-const MODEL_SELECT = document.getElementById("model");
-const DEFAULT_MODEL_OPTIONS = createDefaultModelOptions();
-
-function createDefaultModelOptions() {
-  const defaultOption = document.createElement("option");
-  defaultOption.setAttribute("value", null);
-  defaultOption.setAttribute("disabled", null);
-  defaultOption.setAttribute("selected", null);
-  defaultOption.innerHTML = "Model";
-  return defaultOption;
-}
-
-function getModelsRelativeToMake() {
-  const selectedMakeValue = getMakeValue();
-  const listOfModels = getListOfAvailableModels(selectedMakeValue);
-  const optionElementsToBeInjectedToHtml =
-    createOptionHtmlElements(listOfModels);
-  injectCreatedOptionElementsToHtml(optionElementsToBeInjectedToHtml);
-}
-
-function getMakeValue() {
-  const makeElement = document.getElementById("make");
-  return makeElement.value === "" ? "noMakeSelected" : makeElement.value;
-}
-
-function getListOfAvailableModels(carMake) {
-  const listOfModels = API_CAR_LIST_RESPONSE.map((carListing) => {
-    if (carListing.itemListingInfo.make === carMake) {
-      return carListing.itemListingInfo.model;
-    }
-  });
-  return removeDuplicatesFromArray(listOfModels);
-}
-
-function removeDuplicatesFromArray(array) {
-  const set = new Set(array);
-  set.delete(undefined);
-  return [...set].sort();
-}
-
-function createOptionHtmlElements(listOfModelNames) {
-  return listOfModelNames.map((modelName) =>
-    createOptionHtmlElement(modelName)
-  );
-}
-
-function createOptionHtmlElement(modelName) {
-  const optionElement = document.createElement("option");
-  optionElement.setAttribute("value", modelName);
-  optionElement.innerHTML = modelName;
-  return optionElement;
-}
-
-function injectCreatedOptionElementsToHtml(optionElements) {
-  MODEL_SELECT.innerHTML = "";
-  MODEL_SELECT.appendChild(DEFAULT_MODEL_OPTIONS);
-  optionElements.forEach((option) => {
-    MODEL_SELECT.appendChild(option);
-  });
-}
-// Set listener to Select tag within HTML. This kicks off generation of dynamic
-// models for a user to chose from based on what make they have selected and
-// what models are currently available from the list.
-MAKE_SELECT.addEventListener("change", getModelsRelativeToMake);
-
 // Functionality for dynamically generating HTML components
-
 //// Latest Car Tiles
 
 function renderUsedCarTiles(tileRenderCount) {
