@@ -11,7 +11,7 @@ const API_CAR_LIST_RESPONSE = [
   {
     itemListingTitle: "Mazda for sale",
     itemListingInfo: {
-      price: "3,500",
+      price: 3500,
       make: "mazda",
       model: "mx5",
       year: "2004",
@@ -26,6 +26,7 @@ const API_CAR_LIST_RESPONSE = [
       owners: "5",
       motExpireDate: "20/11/2022",
       sellerType: "private",
+      dateListed: "03 Nov 2021",
     },
     description:
       "This is a description of the car listing. This will need to be updated.",
@@ -38,7 +39,7 @@ const API_CAR_LIST_RESPONSE = [
   {
     itemListingTitle: "Mazda for sale",
     itemListingInfo: {
-      price: "3,500",
+      price: 3000,
       make: "mazda",
       model: "2",
       year: "2009",
@@ -53,6 +54,7 @@ const API_CAR_LIST_RESPONSE = [
       owners: "5",
       motExpireDate: "23/06/2022",
       sellerType: "private",
+      dateListed: "07 March 2022",
     },
     description:
       "This is a description of the car listing. This will need to be updated.",
@@ -66,7 +68,7 @@ const API_CAR_LIST_RESPONSE = [
   {
     itemListingTitle: "Mazda for sale",
     itemListingInfo: {
-      price: "3,500",
+      price: 6500,
       make: "mazda",
       model: "cx5",
       year: "2014",
@@ -81,6 +83,7 @@ const API_CAR_LIST_RESPONSE = [
       owners: "2",
       motExpireDate: "10/06/2022",
       sellerType: "private",
+      dateListed: "15 Jan 2022",
     },
     description:
       "This is a description of the car listing. This will need to be updated.",
@@ -94,7 +97,7 @@ const API_CAR_LIST_RESPONSE = [
   {
     itemListingTitle: "Audi for sale",
     itemListingInfo: {
-      price: "3,500",
+      price: 4500,
       make: "audi",
       model: "a3",
       year: "2011",
@@ -109,6 +112,7 @@ const API_CAR_LIST_RESPONSE = [
       owners: "2",
       motExpireDate: "20/11/2022",
       sellerType: "private",
+      dateListed: "26 Dec 2021",
     },
     description:
       "This is a description of the car listing. This will need to be updated.",

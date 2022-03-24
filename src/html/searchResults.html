@@ -96,7 +96,7 @@
             </form>
             <div class="row">
               <div class="col-md-2">
-                <button class="refine-search-refresh">
+                <button id="reset-search-button" class="refine-search-refresh">
                   <img
                     src="../../assets/searchResults/refresh-cw.svg"
                     alt="refresh icon, use this to reset options."
@@ -116,10 +116,11 @@
               <h1>Cars For Sale</h1>
               <div class="sort-by-wrapper">
                 <label>Sort by:</label>
-                <select>
-                  <option value="priceAsc" selected>Price Ascending</option>
-                  <option value="priceDesc" selected>Price Descending</option>
-                  <option value="newListing" selected>Newly Listed</option>
+                <select id="sort-by">
+                  <option value="" selected disabled>Sort</option>
+                  <option value="priceAsc">Price Ascending</option>
+                  <option value="priceDesc">Price Descending</option>
+                  <option value="newlyListed">Newly Listed</option>
                 </select>
                 <img
                   src="../../assets/searchResults/info-icon.svg"

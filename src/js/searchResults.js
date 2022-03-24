@@ -1,12 +1,34 @@
+let carListingsToRender = API_CAR_LIST_RESPONSE;
+
 const LISTINGS_ROOT = document.getElementById("listingsRoot");
 
-function renderTiles() {
-  const listOfSalesToDisplay = API_CAR_LIST_RESPONSE;
-  listOfSalesToDisplay.forEach((listing) => {
-    const containingDiv = createContainingTileDiv(listing);
+function renderTiles(refinedList) {
+  emptyRootTiles();
+  carListingsToRender =
+    refinedList instanceof Array ? refinedList : carListingsToRender;
 
+  if (carListingsToRender.length > 0) {
+    renderEachTile();
+  } else {
+    displayEmptyListMessage();
+  }
+}
+
+function emptyRootTiles() {
+  LISTINGS_ROOT.innerHTML = "";
+}
+
+function renderEachTile() {
+  carListingsToRender.forEach((listing) => {
+    const containingDiv = createContainingTileDiv(listing);
     LISTINGS_ROOT.appendChild(containingDiv);
   });
+}
+
+function displayEmptyListMessage() {
+  const emptyListMessage = document.createElement("h1");
+  emptyListMessage.innerHTML = "There are no listings for that search.";
+  LISTINGS_ROOT.appendChild(emptyListMessage);
 }
 
 function createContainingTileDiv(listing) {
@@ -138,9 +160,75 @@ body.onload = renderTiles;
 
 // Refine Search Functionality
 const REFINE_SEARCH_BUTTON = document.getElementById("refine-search-button");
-//// TODO: need to have a kick off function that uses a given format
-//// to parse the required listings from the dummy API call
-// REFINE_SEARCH_BUTTON.addEventListener(
-//   "click",
-//   renderTiles
-// );
+REFINE_SEARCH_BUTTON.addEventListener("click", refineSearchResults);
+const MAKE = 0;
+const MODEL = 1;
+const TRANSMISSION = 2;
+const FUEL_TYPE = 3;
+
+function refineSearchResults() {
+  const params = getQueryParams();
+  const refinedResults = filterResults(params);
+  renderTiles(refinedResults);
+}
+
+function getQueryParams() {
+  const selections = [
+    document.getElementById("make"),
+    document.getElementById("model"),
+    document.getElementById("transmission"),
+    document.getElementById("fuelType"),
+  ];
+
+  return selections.map((element) => {
+    return element.value;
+  });
+}
+
+function filterResults(queryParams) {
+  return API_CAR_LIST_RESPONSE.filter((carListing) =>
+    doesParamsMatchObject(carListing, queryParams)
+  );
+}
+
+function doesParamsMatchObject(carListing, queryParams) {
+  return (
+    carListing.itemListingInfo.make === queryParams[MAKE] &&
+    carListing.itemListingInfo.model === queryParams[MODEL] &&
+    carListing.itemListingInfo.transmission === queryParams[TRANSMISSION] &&
+    carListing.itemListingInfo.fuelType === queryParams[FUEL_TYPE]
+  );
+}
+
+// Reset refine search functionality
+// This will simply refresh the page
+const RESET_SEARCH_BUTTON = document.getElementById("reset-search-button");
+RESET_SEARCH_BUTTON.addEventListener("click", () => location.reload());
+
+// Sort list by option
+const SORT_BY_OPTION = document.getElementById("sort-by");
+SORT_BY_OPTION.addEventListener("change", sortCarListings);
+
+function sortCarListings(e) {
+  const sortBy = e.target.value;
+  switch (sortBy) {
+    case "priceAsc":
+      carListingsToRender = carListingsToRender.sort((a, b) => {
+        return b.itemListingInfo.price - a.itemListingInfo.price;
+      });
+      break;
+    case "priceDesc":
+      carListingsToRender = carListingsToRender.sort((a, b) => {
+        return a.itemListingInfo.price - b.itemListingInfo.price;
+      });
+      break;
+    case "newlyListed":
+      carListingsToRender = carListingsToRender.sort((a, b) => {
+        return Date.parse(a.itemListingInfo.dateListed) - Date.parse(b.itemListingInfo.dateListed);
+      });
+      break;
+    default:
+      break;
+  }
+  renderTiles(carListingsToRender);
+}
