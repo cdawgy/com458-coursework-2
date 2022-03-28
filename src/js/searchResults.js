@@ -1,5 +1,7 @@
 let carListingsToRender = API_CAR_LIST_RESPONSE;
+const SEARCH_PARAMS_KEY = "searchParamsKey";
 
+// Render Tiles
 const LISTINGS_ROOT = document.getElementById("listingsRoot");
 
 function renderTiles(refinedList) {
@@ -154,9 +156,65 @@ function createInfoIconList(listing) {
   ];
 }
 
-// LISTINGS_ROOT.onload = renderTiles();
 const body = document.getElementsByTagName("body")[0];
 body.onload = renderTiles;
+
+// Render tags
+
+const SEARCH_TAGS_ROOT = document.getElementById("search-tags-root");
+
+function renderSearchTags() {
+  resetRootTags();
+  const params = getSearchParamsFromLocalStorage();
+  params.forEach((tagName) => {
+    if (isTagNameNull(tagName)) {
+      const tag = createSearchTagElement(tagName);
+      SEARCH_TAGS_ROOT.append(tag);
+    }
+  });
+}
+
+function getSearchParamsFromLocalStorage() {
+  const params = window.localStorage.getItem(SEARCH_PARAMS_KEY);
+  return params.split(",");
+}
+
+function isTagNameNull(tagName) {
+  return tagName != "null" && tagName != "";
+}
+
+function formatTagName(tagName) {
+  const firstLetter = tagName[0].toUpperCase();
+  const tagLength = tagName.length;
+  return firstLetter + tagName.slice(1, tagLength);
+}
+
+function resetRootTags() {
+  SEARCH_TAGS_ROOT.innerHTML = "";
+}
+
+function createSearchTagElement(tagName) {
+  const formattedTagName = formatTagName(tagName);
+  const tag = document.createElement("div");
+  tag.setAttribute("onclick", "removeTagFromSearch(event)");
+  tag.setAttribute("tagname", tagName);
+  tag.innerHTML = formattedTagName;
+  return tag;
+}
+
+function removeTagFromSearch(event) {
+  const tagname = event.target.attributes.tagname.value;
+
+  let searchParams = window.localStorage.getItem(SEARCH_PARAMS_KEY);
+  searchParams = searchParams.replace(tagname, "null");
+  window.localStorage.setItem(SEARCH_PARAMS_KEY, searchParams);
+
+  const queryParamsArray = searchParams.split(",");
+  const refinedResults = filterResults(queryParamsArray);
+  renderTiles(refinedResults);
+  console.log(queryParamsArray);
+  console.log(refinedResults);
+}
 
 // Refine Search Functionality
 const REFINE_SEARCH_BUTTON = document.getElementById("refine-search-button");
@@ -169,6 +227,13 @@ const FUEL_TYPE = 3;
 function refineSearchResults() {
   const params = getQueryParams();
   const refinedResults = filterResults(params);
+
+  window.localStorage.setItem(SEARCH_PARAMS_KEY, params);
+
+  // Render search tags
+  renderSearchTags();
+
+  // Render listing tiles within DOM
   renderTiles(refinedResults);
 }
 
@@ -192,12 +257,28 @@ function filterResults(queryParams) {
 }
 
 function doesParamsMatchObject(carListing, queryParams) {
-  return (
-    carListing.itemListingInfo.make === queryParams[MAKE] &&
-    carListing.itemListingInfo.model === queryParams[MODEL] &&
-    carListing.itemListingInfo.transmission === queryParams[TRANSMISSION] &&
-    carListing.itemListingInfo.fuelType === queryParams[FUEL_TYPE]
-  );
+  let flag = true;
+
+  if (queryParams[MAKE] != "null") {
+    flag = carListing.itemListingInfo.make === queryParams[MAKE];
+  }
+
+  if (queryParams[MODEL] != "null" && flag) {
+    flag = carListing.itemListingInfo.model === queryParams[MODEL];
+  }
+
+  if (queryParams[TRANSMISSION] != "null" && flag) {
+    flag =
+      carListing.itemListingInfo.transmission === queryParams[TRANSMISSION];
+  }
+  if (queryParams[FUEL_TYPE] != "null" && flag) {
+    flag = carListing.itemListingInfo.fuelType === queryParams[FUEL_TYPE];
+  }
+  return flag;
+}
+
+function isQueryParamDefined(param) {
+  return param != "" || param != null;
 }
 
 // Reset refine search functionality
@@ -212,19 +293,22 @@ SORT_BY_OPTION.addEventListener("change", sortCarListings);
 function sortCarListings(e) {
   const sortBy = e.target.value;
   switch (sortBy) {
-    case "priceAsc":
-      carListingsToRender = carListingsToRender.sort((a, b) => {
-        return b.itemListingInfo.price - a.itemListingInfo.price;
-      });
-      break;
-    case "priceDesc":
+    case "priceLowToHigh":
       carListingsToRender = carListingsToRender.sort((a, b) => {
         return a.itemListingInfo.price - b.itemListingInfo.price;
       });
       break;
+    case "priceHighToLow":
+      carListingsToRender = carListingsToRender.sort((a, b) => {
+        return b.itemListingInfo.price - a.itemListingInfo.price;
+      });
+      break;
     case "newlyListed":
       carListingsToRender = carListingsToRender.sort((a, b) => {
-        return Date.parse(a.itemListingInfo.dateListed) - Date.parse(b.itemListingInfo.dateListed);
+        return (
+          Date.parse(a.itemListingInfo.dateListed) -
+          Date.parse(b.itemListingInfo.dateListed)
+        );
       });
       break;
     default:
