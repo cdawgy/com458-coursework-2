@@ -6,6 +6,10 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
   return new bootstrap.Popover(popoverTriggerEl);
 });
 
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
 // FAKE API RESPONSE - LIST OF CARS
 const API_CAR_LIST_RESPONSE = [
   {

@@ -125,6 +125,10 @@
                   <option value="newlyListed">Newly Listed</option>
                 </select>
                 <img
+                  data-toggle="tooltip"
+                  data-placement="right"
+                  title="Price Low - High: Sort the listings by least expensive Listing first. Price High - Low: Sort the listings by most expensive Listing first. Newly Listed: Sort the listings by recently added listings."
+                  id="sort-by-icon"
                   src="../../assets/searchResults/info-icon.svg"
                   alt="Info icon, hover this for definition of refinements."
                 />
@@ -186,6 +190,6 @@
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap/bootstrap.min.js"></script>
     <script src="../js/global.js"></script>
-    <script src="../js/searchResults.js"></script>
+    <script type="module" src="../js/search-results/searchResults.js"></script>
   </body>
 </html>
