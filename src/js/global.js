@@ -7,12 +7,13 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 });
 
 $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
+  $('[data-toggle="tooltip"]').tooltip();
+});
 
 // FAKE API RESPONSE - LIST OF CARS
 const API_CAR_LIST_RESPONSE = [
   {
+    itemListingId: 1,
     itemListingTitle: "Mazda for sale",
     itemListingInfo: {
       price: 3500,
@@ -41,6 +42,7 @@ const API_CAR_LIST_RESPONSE = [
     ],
   },
   {
+    itemListingId: 2,
     itemListingTitle: "Mazda for sale",
     itemListingInfo: {
       price: 3000,
@@ -70,6 +72,7 @@ const API_CAR_LIST_RESPONSE = [
     ],
   },
   {
+    itemListingId: 3,
     itemListingTitle: "Mazda for sale",
     itemListingInfo: {
       price: 6500,
@@ -99,6 +102,7 @@ const API_CAR_LIST_RESPONSE = [
     ],
   },
   {
+    itemListingId: 4,
     itemListingTitle: "Audi for sale",
     itemListingInfo: {
       price: 4500,

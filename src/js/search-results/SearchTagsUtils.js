@@ -11,18 +11,13 @@ const SEARCH_TAGS_ROOT = document.getElementById("search-tags-root");
 
 export function renderSearchTags() {
   resetRootTags();
-  const params = getSearchParamsFromLocalStorage();
+  const params = getLocalStorageValue(SEARCH_PARAMS_KEY);
   params.forEach((tagName) => {
     if (isTagNameNull(tagName)) {
       const tag = createSearchTagElement(tagName);
       SEARCH_TAGS_ROOT.append(tag);
     }
   });
-}
-
-function getSearchParamsFromLocalStorage() {
-  const params = getLocalStorageValue(SEARCH_PARAMS_KEY);
-  return params.split(",");
 }
 
 function isTagNameNull(tagName) {
@@ -46,14 +41,19 @@ function createSearchTagElement(tagName) {
 
 function removeTagFromSearch(event) {
   const tagname = event.target.attributes.tagname.value;
-
-  let searchParams = getLocalStorageValue(SEARCH_PARAMS_KEY);
-  searchParams = searchParams.replace(tagname, "null");
-  storeLocalValue(SEARCH_PARAMS_KEY, searchParams);
-
+  const queryParams = removeParamFromQueryInLocalStorage(tagname);
+  const refinedResults = filterResults(queryParams);
   event.target.remove();
-
-  const queryParamsArray = searchParams.split(",");
-  const refinedResults = filterResults(queryParamsArray);
   renderTiles(refinedResults);
+}
+
+function removeParamFromQueryInLocalStorage(tagName) {
+  const searchParams = getLocalStorageValue(SEARCH_PARAMS_KEY);
+  searchParams.forEach((param, index) => {
+    if (param === tagName) {
+      searchParams[index] = "null";
+    }
+  });
+  storeLocalValue(SEARCH_PARAMS_KEY, searchParams);
+  return searchParams;
 }
