@@ -154,3 +154,14 @@ footer > ul > li > a {
     display: none;
   }
 }
+
+/* *************** */
+/* GENERAL STYLING */
+/* *************** */
+
+.spacer {
+  height: 1px;
+  width: 100%;
+  margin: 50px auto;
+  background-color: #5f6062;
+}
