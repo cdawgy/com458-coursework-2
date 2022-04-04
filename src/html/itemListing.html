@@ -66,44 +66,20 @@
         <div class="col-lg-6">
           <div id="main-image"></div>
 
-          <div class="mini-img-wrapper">
-            <div class="carousel-button carousel-button-left">
-              <img
-                src="../../assets/itemListing/green-chevron-left.svg"
-                alt="left pointing arrow"
-              />
-            </div>
-
-            <div class="carousel-image"></div>
-
-            <div class="carousel-image"></div>
-
-            <div class="carousel-button carousel-button-right">
-              <img
-                src="../../assets/itemListing/green-chevron-right.svg"
-                alt="right pointing arrow"
-              />
-            </div>
-          </div>
+          <div id="mini-img-wrapper" class="mini-img-wrapper"></div>
         </div>
 
         <div class="col-lg-6">
           <div class="listing-title-wrapper">
-            <h1>Mazda</h1>
-            <h1><span class="font-red">Price:</span> £5,999</h1>
+            <h1 id="listing-title"></h1>
+            <h1 id="listing-price"></h1>
           </div>
-          <h2>MX-5 MK1</h2>
-          <h2 class="mb-3">1999</h2>
+          <h2 id="listing-subtitle"></h2>
+          <h2 id="listing-year" class="mb-3"></h2>
           <div id="listing-info-root"></div>
           <div class="spacer"></div>
           <h1 class="font-red">Description</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            commodo maximus interdum. Donec eu quam et nisl vestibulum euismod
-            ut ac purus. Sed sodales metus pulvinar consectetur eleifend.
-            Vestibulum egestas dolor sed sem efficitur porta. Etiam vel dolor
-            sollicitudin, mattis tellus a, euismod lectus.
-          </p>
+          <p id="description"></p>
         </div>
       </div>
     </div>
@@ -155,6 +131,6 @@
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap/bootstrap.min.js"></script>
     <script src="../js/global.js"></script>
-    <script type="module" src="../js/itemListing.js"></script>
+    <script type="module" src="../js/item-listing/itemListing.js"></script>
   </body>
 </html>
