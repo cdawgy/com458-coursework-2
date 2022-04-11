@@ -1,3 +1,4 @@
+import { redirectToItemListingPage } from "../item-listing/RedirectUtils.js";
 import { capitalize } from "../utils/TextFormatUtils.js";
 
 // Render Tiles
@@ -33,6 +34,10 @@ function displayEmptyListMessage() {
 function createContainingTileDiv(listing) {
   const outerDiv = document.createElement("div");
   outerDiv.className = "search-listing-wrapper";
+  outerDiv.setAttribute("listingid", listing.itemListingId);
+  outerDiv.onclick = (event) => {
+    redirectToItemListingPage(event);
+  };
 
   const innerDiv = document.createElement("div");
   innerDiv.className = "row";

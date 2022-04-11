@@ -1,9 +1,9 @@
+import { getModelsRelativeToMake, MAKE_SELECT } from "../utils/DynamicFormUtils.js";
 import { refineSearchResults } from "./RefineSearchUtils.js";
 import { renderTiles } from "./RenderTilesUtils.js";
 import { sortCarListings } from "./SortByUtils.js";
 
 let carListingsToRender = API_CAR_LIST_RESPONSE;
-const SEARCH_PARAMS_KEY = "searchParamsKey";
 
 // Bind initial render of tiles to body loading
 document.body.onload = () => {
@@ -27,3 +27,9 @@ const SORT_BY_OPTION = document.getElementById("sort-by");
 SORT_BY_OPTION.onchange = (event) => {
   sortCarListings(event, carListingsToRender);
 };
+
+
+// Set listener to Select tag within HTML. This kicks off generation of dynamic
+// models for a user to chose from based on what make they have selected and
+// what models are currently available from the list.
+MAKE_SELECT.addEventListener("change", getModelsRelativeToMake);
