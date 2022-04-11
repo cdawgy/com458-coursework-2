@@ -6,12 +6,12 @@ import {
   capitalize,
   seperateWithWhiteSpace,
 } from "../utils/TextFormatUtils.js";
+import { createCarouselArrow, createSmallerImages, setMainImage } from "./CarouselUtils.js";
 
 export function renderListing() {
   const clickedListingString = getLocalStorageValue(CLICKED_LISTING_KEY);
   const itemListingInfo = clickedListingString.itemListingInfo;
   const itemListingImages = clickedListingString.listOfItemImages;
-  console.log(itemListingImages);
 
   renderListingTitleInfo(itemListingInfo);
   renderListingBody(itemListingInfo);
@@ -75,50 +75,16 @@ function insertListingDescription() {
 }
 
 function renderInitialImages(itemListingImages) {
-  setMainImage(itemListingImages[0]);
+  setMainImage(itemListingImages[0], 0);
   createImageTiles(itemListingImages);
 }
 
-function setMainImage(image) {
-  const imageDiv = document.getElementById("main-image");
-  imageDiv.style.backgroundImage = `url("${image}")`;
-}
-
 function createImageTiles(itemListingImages) {
-  const leftArrow = createCarouselArrow("left");
-  const rightArrow = createCarouselArrow("right");
+  const leftArrow = createCarouselArrow("left", itemListingImages);
+  const rightArrow = createCarouselArrow("right", itemListingImages);
 
   const miniImgWrapper = document.getElementById("mini-img-wrapper");
   miniImgWrapper.appendChild(leftArrow);
   createSmallerImages(miniImgWrapper, itemListingImages);
   miniImgWrapper.appendChild(rightArrow);
-}
-
-function createCarouselArrow(direction) {
-  direction = direction.toLowerCase();
-  const arrow = document.createElement("div");
-  arrow.className = `carousel-button carousel-button-${direction}`;
-
-  const img = document.createElement("img");
-  img.src = `../../assets/itemListing/green-chevron-${direction}.svg`;
-  img.alt = `${direction} pointing arrow`;
-
-  arrow.appendChild(img);
-  return arrow;
-}
-
-function createSmallerImages(parentElement, itemListingImages) {
-  for (const imgUrl of itemListingImages) {
-    parentElement.appendChild(createSmallerImage(imgUrl));
-  }
-}
-
-function createSmallerImage(imgUrl) {
-  const imgDiv = document.createElement("div");
-  imgDiv.className = "carousel-image";
-  imgDiv.style.backgroundImage = `url("${imgUrl}")`;
-  imgDiv.onclick = () => {
-    setMainImage(imgUrl);
-  };
-  return imgDiv;
 }
