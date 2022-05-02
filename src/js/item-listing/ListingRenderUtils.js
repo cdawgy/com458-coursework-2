@@ -6,16 +6,29 @@ import {
   capitalize,
   seperateWithWhiteSpace,
 } from "../utils/TextFormatUtils.js";
-import { createCarouselArrow, createSmallerImages, setMainImage } from "./CarouselUtils.js";
+import {
+  createCarouselArrow,
+  createSmallerImages,
+  setMainImage,
+} from "./CarouselUtils.js";
 
 export function renderListing() {
   const clickedListingString = getLocalStorageValue(CLICKED_LISTING_KEY);
   const itemListingInfo = clickedListingString.itemListingInfo;
   const itemListingImages = clickedListingString.listOfItemImages;
+  const listingTitle = clickedListingString.itemListingTitle
 
   renderListingTitleInfo(itemListingInfo);
   renderListingBody(itemListingInfo);
   renderInitialImages(itemListingImages);
+  updateWebPageTitleInnerHTML(listingTitle);
+}
+
+function updateWebPageTitleInnerHTML(listingTitle) {
+  const title = document.getElementsByTagName("title");
+  if (title.length === 1) {
+    title[0].innerHTML = `${listingTitle} | Connolly Group`;
+  }
 }
 
 function renderListingBody(itemListingInfo) {
