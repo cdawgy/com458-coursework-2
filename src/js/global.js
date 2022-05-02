@@ -136,18 +136,22 @@ const NEW_CAR_ESSENTIALS_LIST = [
   {
     title: "Insurance",
     img: "../../assets/homePage/insurance-icon.svg",
+    link: "https://en.wikipedia.org/wiki/Vehicle_insurance"
   },
   {
     title: "Car Value",
     img: "../../assets/homePage/car-icon.svg",
+    link: "https://www.carbuyer.co.uk/car-buying/303735/how-to-value-a-used-car"
   },
   {
     title: "Finance",
     img: "../../assets/homePage/finance-icon.svg",
+    link: "https://www.moneysupermarket.com/loans/car-finance/"
   },
   {
     title: "Car History",
     img: "../../assets/homePage/history-icon.svg",
+    link: "https://www.webuyanycar.com/free-car-check/"
   },
 ];
 

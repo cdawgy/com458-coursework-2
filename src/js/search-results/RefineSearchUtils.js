@@ -1,5 +1,10 @@
 import {
+  QUERY_PARAMS_KEY,
   SEARCH_PARAMS_KEY,
+} from "../utils/constants.js";
+import {
+  doesKeyHaveValues,
+  getLocalStorageValue,
   storeLocalValue,
 } from "../utils/LocalStorageUtils.js";
 import { renderTiles } from "./RenderTilesUtils.js";
@@ -24,6 +29,14 @@ export function refineSearchResults() {
 }
 
 function getQueryParams() {
+  if (doesKeyHaveValues(QUERY_PARAMS_KEY)) {
+    return getLocalStorageValue(QUERY_PARAMS_KEY);
+  } else {
+    return readQueryParamsFromDOM();
+  }
+}
+
+export function readQueryParamsFromDOM() {
   const selections = [
     document.getElementById("make"),
     document.getElementById("model"),

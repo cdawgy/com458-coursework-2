@@ -1,6 +1,6 @@
+import { SEARCH_PARAMS_KEY } from "../utils/constants.js";
 import {
   getLocalStorageValue,
-  SEARCH_PARAMS_KEY,
   storeLocalValue,
 } from "../utils/LocalStorageUtils.js";
 import { capitalize } from "../utils/TextFormatUtils.js";

@@ -16,7 +16,8 @@ function createEssentialTileComponent(essentialItem) {
   tileContianer.className = "info-tile";
 
   const anchorLink = document.createElement("a");
-  anchorLink.href = "#";
+  anchorLink.target = "_blank"
+  anchorLink.href = essentialItem.link;
 
   const tileImg = document.createElement("div");
   tileImg.className = "info-tile-img";

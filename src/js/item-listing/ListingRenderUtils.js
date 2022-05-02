@@ -1,5 +1,5 @@
+import { CLICKED_LISTING_KEY } from "../utils/constants.js";
 import {
-  CLICKED_LISTING_KEY,
   getLocalStorageValue,
 } from "../utils/LocalStorageUtils.js";
 import {

@@ -1,3 +1,8 @@
+import {
+  LISTING_ATTR_ID,
+  redirectToItemListingPage,
+} from "../item-listing/RedirectUtils.js";
+
 const LATEST_CARS_ROOT = document.getElementById("latestUsedCars");
 
 export function renderUsedCarTiles(tileRenderCount) {
@@ -18,6 +23,12 @@ function createCarTiles(listOfCarSales) {
 function createCarTile(carListing) {
   const carListingTile = document.createElement("div");
   carListingTile.className = "car-listing-tile";
+
+  // Add relative ID to tile
+  carListingTile.setAttribute(LISTING_ATTR_ID, carListing.itemListingId);
+  carListingTile.onclick = (mouseClickEvent) => {
+    redirectToItemListingPage(mouseClickEvent);
+  };
 
   // Create image
   const carTileImg = createCarTileImage(carListing.listOfItemImages[0]);
