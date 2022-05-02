@@ -40,6 +40,11 @@ label {
   color: #ffffff !important;
 }
 
+select {
+  background-color: #ffffff;
+  color: #333333;
+}
+
 /* ************** */
 /* NAVBAR STYLING */
 /* ************** */
@@ -107,8 +112,29 @@ button:hover {
   background-color: #ba3750;
 }
 
+.anchor-button {
+  background-color: #ee4b6a;
+  color: #ffffff;
+  border: none !important;
+  transition: 0.2s;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.anchor-button:hover {
+  background-color: #ba3750;
+  color: #ffffff;
+}
+
 body {
   margin-top: 70px;
+}
+
+@media only screen and (max-width: 991px) {
+  body {
+    margin: 0;
+  }
 }
 
 /* ************** */

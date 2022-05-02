@@ -47,6 +47,10 @@
 
 /* Car Listing Tiles */
 
+#latestUsedCars {
+  overflow-y: hidden;
+}
+
 .car-listing-tile {
   border-radius: 5px;
   min-width: 240px;
@@ -105,68 +109,88 @@
 /* Electric Cars Panel */
 
 .electric-cars {
-    background-color: #49A7BE;
-    background-image: url("../../assets/homePage/electric_bg.png");
-    background-position-x: -90px;
-    background-position-y: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+  background-color: #49a7be;
+  background-image: url("../../assets/homePage/electric_bg.png");
+  background-position-x: -90px;
+  background-position-y: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .electric-cars > div {
-    display: flex;
+  display: flex;
 }
 
-.electric-car-content {
-    width: 50%;
-    margin-bottom: 100px;
-}
-
-.electric-car-content button {
-    padding: 1em 5em;
-}
+/* .electric-car-content {
+  width: 50%;
+  margin-bottom: 100px;
+} */
 
 .electric-car-img {
-    background-image: url("../../assets/homePage/electric_car_pic.png");
-    background-position: center;
-    background-size: cover;
-    width: 50%;
+  background-image: url("../../assets/homePage/electric_car_pic.png");
+  background-position: center;
+  background-size: cover;
+  width: 50%;
 }
 
 /* Info Tiles */
 
-.info-tile { 
-    background-color: #ffffff;
-    padding: 20px 0px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0 10px 20px 1px;
-    text-align: center;
-    transition: 0.4s;
-    border-radius: 10px;
+.info-tile {
+  background-color: #ffffff;
+  padding: 20px 0px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 10px 20px 1px;
+  text-align: center;
+  transition: 0.4s;
+  border-radius: 10px;
 }
 
-.info-tile:hover { 
-    transform: scale(1.04);
+.info-tile:hover {
+  transform: scale(1.04);
 }
 
 .info-tile a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .info-tile p {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .info-tile-img {
-    /* background-image: url("../../assets/homePage/insurance-icon.svg"); */
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 100px;
-    width: auto;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: auto;
 }
 
 /* Media Queries for Mobile size */
 
 @media only screen and (max-width: 991px) {
-    
+  .search-wrapper{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    position: relative;
   }
+
+  .search-bar-wrapper {
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .search-bar-wrapper > form {
+    display: block;
+  }
+  .search-bar-wrapper > form > * {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .info-tile {
+    margin-bottom: 10px;
+  }
+}
