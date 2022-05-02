@@ -1,6 +1,3 @@
-export const SEARCH_PARAMS_KEY = "searchParamsKey";
-export const CLICKED_LISTING_KEY = "clickedListingKey";
-
 export function storeLocalValue(key, value) {
   const valueToBeStored = validateValue(value);
   window.localStorage.setItem(key, valueToBeStored);
@@ -17,5 +14,10 @@ export function getLocalStorageValue(key) {
 }
 
 function parseValue(value) {
-  return JSON.parse(value);
+  return value != "undefined" ? JSON.parse(value) : value;
+}
+
+export function doesKeyHaveValues(key){
+  const value = window.localStorage.getItem(key);
+  return value != "undefined" || value != undefined ? true : false;
 }
