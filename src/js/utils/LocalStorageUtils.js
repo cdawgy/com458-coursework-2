@@ -17,7 +17,7 @@ function parseValue(value) {
   return value != "undefined" ? JSON.parse(value) : value;
 }
 
-export function doesKeyHaveValues(key){
+export function doesKeyHaveValues(key) {
   const value = window.localStorage.getItem(key);
-  return value != "undefined" || value != undefined ? true : false;
+  return value != "undefined";
 }

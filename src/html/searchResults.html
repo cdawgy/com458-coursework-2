@@ -84,12 +84,18 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-4">
-          <div class="refine-search-wrapper">
+          <div id="refineSearchModal" class="refine-search-wrapper">
             <div class="refine-search-title">
               <h2>Refine Search</h2>
               <img
+                id="refineModalDisplayIcon"
                 src="../../assets/searchResults/searchIcon.svg"
                 alt="Icon of magnification glass"
+              />
+              <img
+                id="refineModalCloseIcon"
+                src="../../assets/searchResults/x.svg"
+                alt="icon of magnifying glass"
               />
             </div>
             <form>
@@ -134,6 +140,13 @@
 
         <div class="col-lg-8">
           <div class="search-results-wrapper">
+            <!-- Button to toggle modal refine search modal -->
+            <div id="refineSearchModalButton">
+              <img
+                src="../../assets/searchResults/filter.svg"
+                alt="icon of magnifying glass"
+              />
+            </div>
             <div class="results-title-wrapper">
               <h1>Cars For Sale</h1>
               <div class="sort-by-wrapper">

@@ -1,9 +1,6 @@
-
 import { CLICKED_LISTING_KEY } from "../utils/constants.js";
 import { ITEM_LISTING_PAGE } from "../constants/pageNameConstants.js";
-import {
-  storeLocalValue,
-} from "../utils/LocalStorageUtils.js";
+import { storeLocalValue } from "../utils/LocalStorageUtils.js";
 
 export const LISTING_ATTR_ID = "listingid";
 
@@ -21,11 +18,20 @@ export function redirectToPage(redirectPage) {
 }
 
 function getParentSearchListingWrapper(event) {
-  return event.path.filter(
-    (htmlElementInPath) =>
-      htmlElementInPath.className === "search-listing-wrapper" ||
-      htmlElementInPath.className === "car-listing-tile"
-  )[0];
+  var currentTarget = event.currentTarget;
+  var currentTargetParent = currentTarget.parentNode;
+  while (checkElementClassName(currentTarget)) {
+    currentTarget = currentTargetParent;
+    currentTargetParent = currentTarget.parentNode;
+  }
+  return currentTarget;
+}
+
+function checkElementClassName(currentTarget) {
+  return (
+    currentTarget.className !== "search-listing-wrapper" &&
+    currentTarget.className !== "car-listing-tile"
+  );
 }
 
 function getItemListingIdFromWrapperElement(searchListingWrapper) {

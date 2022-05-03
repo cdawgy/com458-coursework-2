@@ -12,12 +12,18 @@ const SEARCH_TAGS_ROOT = document.getElementById("search-tags-root");
 export function renderSearchTags() {
   resetRootTags();
   const params = getLocalStorageValue(SEARCH_PARAMS_KEY);
-  params.forEach((tagName) => {
-    if (isTagNameNull(tagName)) {
-      const tag = createSearchTagElement(tagName);
-      SEARCH_TAGS_ROOT.append(tag);
-    }
-  });
+  if (areSearchParamsDefined(params)) {
+    params.forEach((tagName) => {
+      if (isTagNameNull(tagName)) {
+        const tag = createSearchTagElement(tagName);
+        SEARCH_TAGS_ROOT.append(tag);
+      }
+    });
+  }
+}
+
+function areSearchParamsDefined(searchParams) {
+  return searchParams != "undefined";
 }
 
 function isTagNameNull(tagName) {
