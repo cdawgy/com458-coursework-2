@@ -172,11 +172,13 @@
 #refineSearchModalButton {
   display: none;
   box-shadow: #5f6062 0px 0px 15px -6px;
+  background-color: #ffffff;
   padding: 7px;
   border-radius: 5px;
-  position: absolute;
+  position: fixed;
   top: 80px;
   right: 10px;
+  z-index: 1;
 }
 
 #refineModalDisplayIcon {
@@ -184,6 +186,15 @@
 }
 
 #refineModalCloseIcon{
+  display: none;
+}
+
+#dark-bg {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgb(95 96 98 / 67%);
   display: none;
 }
 
@@ -223,8 +234,8 @@
 
   /* Make refine search pop up modal on smaller screen */
   .refine-search-wrapper {
-    position: absolute;
-    z-index: 1;
+    position: fixed;
+    z-index: 2;
     left: 0;
     top: 80px;
     width: 90%;
