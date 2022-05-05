@@ -55,7 +55,7 @@ function createContainingTileDiv(listing) {
 
 function createListingImage(imgUrl) {
   const outerDiv = document.createElement("div");
-  outerDiv.className = "col-2";
+  outerDiv.className = "col-xs-6 col-lg-2 listingTileImage";
 
   const imageDiv = document.createElement("div");
   imageDiv.className = "search-listing-img";
@@ -68,7 +68,7 @@ function createListingImage(imgUrl) {
 
 function createListingBody(listing) {
   const outerBodyDiv = document.createElement("div");
-  outerBodyDiv.className = "col-10";
+  outerBodyDiv.className = "col-xs-6 col-lg-10";
 
   const innerDiv = document.createElement("div");
   innerDiv.className = "search-listing-body";
