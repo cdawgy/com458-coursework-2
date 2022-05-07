@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "test": "jest --coverage --collectCoverageFrom='src/js/**/*.js'"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.17.10",
+    "jest": "^28.1.0"
+  }
+}
