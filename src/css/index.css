@@ -164,6 +164,30 @@
   width: auto;
 }
 
+/* Recently viewed cars pop up */
+
+.recentlyViewedCarPopup {
+  background-color: #ee4b6a;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2;
+  display: none;
+}
+
+#recentlyViewedCarPopupBody {
+  position: relative;
+  padding: 10px;
+}
+
+#recentlyViewedCarPopupBody > img {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+}
+
 /* Media Queries for Mobile size */
 
 @media only screen and (max-width: 991px) {
