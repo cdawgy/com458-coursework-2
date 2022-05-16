@@ -1,0 +1,75 @@
+.display-wrapper {
+    background-image: url("../../assets/sellYourCar/title-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 110px;
+    
+  }
+  .display-wrapper > div > h2{
+    padding-bottom: 30px;
+  }
+
+.sell{
+    width: 750px;
+    margin: 0 auto;
+    background-color: #FBFBFB;
+    border-radius: 10px;
+    padding: 40px 140px;
+    box-shadow: 0px 0px 8px #888888;
+    text-align: left;
+    position: relative;
+  }
+
+.horizontal-center {
+    display: flex;
+    justify-content: center;
+}
+
+.submit{
+     width: 60%;
+     border-radius: 5px;
+     padding: 10px 0px;
+}
+
+label{
+    display: block;
+}
+
+input{
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 5px 5px;
+    border: 1px #aeaeae solid;
+}
+
+form{
+    width: 100%;
+}
+
+input:last-child{
+    min-height: 100px;
+}
+
+#topIcon{
+    position: absolute;
+    top: -5px;
+    right: -28px;
+}
+
+#bottomIcon{
+    position: absolute;
+    bottom: -18px;
+    left: -31px;
+}
+
+@media only screen and (max-width: 991px) {
+    .sell{
+        width: 100%;
+        padding: 15px;
+    }
+    #topIcon, #bottomIcon{
+        display: none;
+    }
+}
