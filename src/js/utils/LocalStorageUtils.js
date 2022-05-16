@@ -19,5 +19,5 @@ function parseValue(value) {
 
 export function doesKeyHaveValues(key) {
   const value = window.localStorage.getItem(key);
-  return value != "undefined";
+  return value != "undefined" && value != null;
 }
