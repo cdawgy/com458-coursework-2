@@ -8,5 +8,5 @@ document.body.onload = () => {
   renderListing();
   const clickedListingString = getLocalStorageValue(CLICKED_LISTING_KEY);
   const id = clickedListingString.itemListingId;
-  storeKeyValueInCookies("recentlyViewedCar", id, 60);
+  storeKeyValueInCookies("recentlyViewedCar", id, 180);
 };
