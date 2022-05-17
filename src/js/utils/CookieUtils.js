@@ -38,7 +38,7 @@ export function updateCookieUI() {
 }
 
 export function cookieRedirect(event) {
-  if (event.currentTarget.className != "recentlyViewedCloseButton") {
+  if (event.target.className != "recentlyViewedCloseButton") {
     const recentlyViewedCarPopup = getParentSearchListingWrapper(event);
     const id = recentlyViewedCarPopup.getAttribute("carid");
     const listedItem = getItemListingFromApiCall(id);
