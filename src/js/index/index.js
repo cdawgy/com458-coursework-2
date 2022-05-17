@@ -9,8 +9,23 @@ import {
 import { storeLocalValue } from "../utils/LocalStorageUtils.js";
 import { renderUsedCarTiles } from "./RenderCarTiles.js";
 import { renderEssentialsTiles } from "./RenderEssentialTiles.js";
+import { cookieRedirect, isCookieDefined, updateCookieUI } from "../utils/CookieUtils.js";
+
+// Create on click function for recently viewed pop up
+// This pop up should only display if a relative cookie exists.
+const RECENTLY_VIEWED_CAR = document.getElementById("recentlyViewedCarPopup");
+RECENTLY_VIEWED_CAR.onclick = (mouseClickEvent) => {
+  cookieRedirect(mouseClickEvent);
+};
 
 // Functions to fire on load of page
+document.body.onload = () => {
+  if(isCookieDefined()){
+    updateCookieUI();
+    RECENTLY_VIEWED_CAR.style.display = "block"
+  }
+}
+
 const LATEST_CARS_ROOT = document.getElementById("latestUsedCars");
 LATEST_CARS_ROOT.onload = renderUsedCarTiles(4);
 

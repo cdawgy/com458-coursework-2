@@ -38,7 +38,7 @@ function getItemListingIdFromWrapperElement(searchListingWrapper) {
   return searchListingWrapper.getAttribute(LISTING_ATTR_ID);
 }
 
-function getItemListingFromApiCall(itemListingId) {
+export function getItemListingFromApiCall(itemListingId) {
   return API_CAR_LIST_RESPONSE.filter(
     (listing) => listing.itemListingId === parseInt(itemListingId)
   )[0];
