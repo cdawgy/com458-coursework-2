@@ -1,0 +1,94 @@
+/*  */
+.contactUsCentre {
+    height: 200px;
+    background: #CCCCCC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-padding {
+    padding: 7rem 0; 
+}
+
+.div-padding {
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+}
+
+.horizontal-center {
+    display: flex;
+    justify-content: center;
+}
+.div-text-inline{
+    display:inline-block;
+    vertical-align: top;
+}
+input{
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 5px 5px;
+    border: 1px #aeaeae solid;
+}
+
+select{
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 5px 5px;
+    border: 1px #aeaeae solid;
+}
+
+p.address-text{
+    font-family: "Century Gothic", Arial, Helvetica, sans-serif;;
+    font-size: 15px;
+    font-weight: bold;
+    color: #616161;
+    text-align: center;
+}
+
+p.list-text{
+    font-family: "Century Gothic", Arial, Helvetica, sans-serif;;
+    font-size: 16px;
+    color: #616161;
+}
+
+p.phone-text{
+    font-family: "Century Gothic", Arial, Helvetica, sans-serif;;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #616161;
+    text-align: right;
+}
+
+/* This doesn't seem to work as i'd expect it so included as style in relevant div */
+.div-border-right { 
+    border-right: thin solid #817e7e;
+} 
+
+.div-border-top { 
+    border-top: thin solid #817e7e;
+}  
+
+.contactUsButton {
+	background-color:#49beab;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:"Century Gothic";
+	font-size:17px;
+	font-weight:bold;
+	padding:10px 67px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #49BEAA;
+}
+.contactUsButton:hover {
+	background-color:#36aa8d;
+}
+.contactUsButton:active {
+	position:relative;
+	top:1px;
+}
